@@ -54,7 +54,35 @@ void tinhTrungBinhTongCacSoChiaHetCho3()
 
 
 }
-
+void sapXepPhanTuMang()
+{
+	int integerArray[100];
+	int tmp;
+	int length;
+	printf("Nhap kich thuoc mang: ");
+	scanf("%d", &length);
+	printf("Nhap du lieu cho mang %d phan tu\n", length);
+	for (int i = 0; i < length; i++)
+	{
+		printf("mang[%d] =", i);
+		scanf("%d", &integerArray[i]);
+	}
+	printf("Xuat du lieu mang %d phan tu\n", length);
+	for (int i = 0; i < length; i++)
+	{
+		if (integerArray[i] > integerArray[i + 1])
+		{
+			tmp = integerArray[i];
+			integerArray[i] = integerArray[i + 1];
+			integerArray[i + 1] = tmp;
+		}
+	}
+	printf("Xuat du lieu mang %d phan tu\n", length);
+	for (int i = 0; i < length; i++)
+	{
+		printf("mang[%d] = %d\n", i, integerArray[i]);
+	}
+}
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -69,7 +97,7 @@ void lapChucNang(int chonChucNang)
 			tinhTrungBinhTongCacSoChiaHetCho3();
 			break;
 		case 3:
-			// ham goi chuc nang 3
+			sapXepPhanTuMang();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
