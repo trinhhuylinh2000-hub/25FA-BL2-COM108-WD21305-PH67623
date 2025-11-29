@@ -2,6 +2,11 @@
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
 #include <stdio.h>
+
+// CConsoleApplication.c : file nay chua 'main' function. 
+// Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
+
+#include <stdio.h>
 void kiemTraSoNguyen()
 {
 	printf("Kiem Tra So Nguyen");
@@ -9,44 +14,44 @@ void kiemTraSoNguyen()
 }
 void tinhTrungBinhTongCacSoChiaHetCho3()
 {
-	
-		
-		int n;
-		printf("Nhap so phan tu cua mang: ");
-		scanf("%d", &n);
 
-		
-		int mang[100];
-		int i;
-		for (i = 0; i < n; i++) {
-			printf("Nhap phan tu thu %d: ", i);
-			scanf("%d", &mang[i]);
+
+	int n;
+	printf("Nhap so phan tu cua mang: ");
+	scanf("%d", &n);
+
+
+	int mang[100];
+	int i;
+	for (i = 0; i < n; i++) {
+		printf("Nhap phan tu thu %d: ", i);
+		scanf("%d", &mang[i]);
+	}
+
+
+	float tong = 0;
+	int count = 0;
+
+
+	for (i = 0; i < n; i++) {
+
+		if (mang[i] % 3 == 0) {
+			tong = tong + mang[i];
+			count++;
 		}
+	}
 
-		
-		float tong = 0;
-		int count = 0; 
 
-		
-		for (i = 0; i < n; i++) {
-			
-			if (mang[i] % 3 == 0) {
-				tong = tong + mang[i];
-				count++;               
-			}
-		}
+	if (count > 0) {
+		float tb = tong / count;
+		printf("Trung binh tong cac so chia het cho 3 la: %.2f\n", tb);
+	}
+	else {
+		printf("Trong mang khong co so nao chia het cho 3.\n");
+	}
 
-		
-		if (count > 0) {
-			float tb = tong / count;
-			printf("Trung binh tong cac so chia het cho 3 la: %.2f\n", tb);
-		}
-		else {
-			printf("Trong mang khong co so nao chia het cho 3.\n");
-		}
+	return 0;
 
-		return 0;
-	
 
 }
 
