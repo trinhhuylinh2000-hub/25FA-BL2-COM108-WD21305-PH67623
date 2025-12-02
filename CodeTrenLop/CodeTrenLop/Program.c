@@ -83,6 +83,44 @@ void sapXepPhanTuMang()
 		printf("mang[%d] = %d\n", i, integerArray[i]);
 	}
 }
+void mangHaiChieu()
+{
+	//string - string.h
+	char mangKyTu[10] = { 'A', 'N', 'H' };
+	//scanf
+	
+	// printf("%C
+	//gets(mangKyTu);
+	for (int i = 0; i < 3; i++)
+	{
+		scanf("%c", &mangKyTu[i]);
+	}
+	//scanf("%C\n'
+	for (int i = 0; i < 10; i++)
+	{
+		scanf(" %c", &mangKyTu);
+	}
+	int array[2][3];
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("mang[%d][%d] = ", i, j);
+			scanf("%d", &array[i][j]);
+		}
+	}
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("%d, ", array[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+	
+	
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -98,6 +136,9 @@ void lapChucNang(int chonChucNang)
 			break;
 		case 3:
 			sapXepPhanTuMang();
+			break;
+		case 4:
+			mangHaiChieu();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
@@ -123,6 +164,8 @@ int main()
 		printf("2. TEN chuc nang 2");
 		printf("\n");
 		printf("3. TEN chuc nang 3");
+		printf("\n");
+		printf("4. mangHaiChieu");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
