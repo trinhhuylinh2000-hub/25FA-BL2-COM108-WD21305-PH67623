@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 
 void kiemTraSoNguyen()
 {
@@ -119,7 +119,7 @@ void mangHaiChieu()
 void demoString()
 {
 	//string
-	char mangKyTu[10] = 'ANH';
+	char mangKyTu[10] = "ANH";
 	//scanf("%c"
 	//gets(mangKyTu);
 	while (getchar() != '\n');
@@ -129,12 +129,27 @@ void demoString()
 	printf("%s", mangKyTu);
 	printf("\n");
 	// put(mangKyTu);
-	printf("%d", strlen(mangKyTu) -1);
+	printf("%d", strlen(mangKyTu) - 1);
 	printf("\n");
 
 	printf("%d", strcmp("A", "B"));
 	printf("\n");
+	char str[5] = "ABC";
+	printf("%s", strrev(str));
+	printf("\n");
+
+	printf("%s", strlwr(str));
+	printf("\n");
+
+	printf("%s", strupr(str));
+	printf("\n");
+
+	printf(strstr("ABC", "D"));
+	printf("\n");
+
 }
+
+
 	
 	
 void lapChucNang(int chonChucNang)
