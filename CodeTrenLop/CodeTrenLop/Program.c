@@ -2,11 +2,9 @@
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
 #include <stdio.h>
+#include <string.h>
 
-// CConsoleApplication.c : file nay chua 'main' function. 
-// Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
-#include <stdio.h>
 void kiemTraSoNguyen()
 {
 	printf("Kiem Tra So Nguyen");
@@ -118,7 +116,25 @@ void mangHaiChieu()
 		printf("\n");
 	}
 }
+void demoString()
+{
+	//string
+	char mangKyTu[10] = 'ANH';
+	//scanf("%c"
+	//gets(mangKyTu);
+	while (getchar() != '\n');
+	printf("Nhap du lieu String: ");
+	fgets(mangKyTu, sizeof(mangKyTu), stdin);
+	//loop + printf("%c\n"
+	printf("%s", mangKyTu);
+	printf("\n");
+	// put(mangKyTu);
+	printf("%d", strlen(mangKyTu) -1);
+	printf("\n");
 
+	printf("%d", strcmp("A", "B"));
+	printf("\n");
+}
 	
 	
 void lapChucNang(int chonChucNang)
@@ -139,6 +155,9 @@ void lapChucNang(int chonChucNang)
 			break;
 		case 4:
 			mangHaiChieu();
+			break;
+		case 5:
+			demoString();
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
@@ -166,6 +185,8 @@ int main()
 		printf("3. TEN chuc nang 3");
 		printf("\n");
 		printf("4. mangHaiChieu");
+		printf("\n");
+		printf("5. demoString");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
