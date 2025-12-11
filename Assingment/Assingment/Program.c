@@ -310,7 +310,7 @@ void sapXepThongTinSinhVien()
         scanf("%f", &diem[i]);
         getchar();
 
-        // Xep loai hoc luc
+       
         if (diem[i] >= 9.0)
             strcpy(hocluc[i], "Xuat sac");
         else if (diem[i] >= 8.0)
@@ -334,7 +334,7 @@ void sapXepThongTinSinhVien()
                 diem[i] = diem[j];
                 diem[j] = tempDiem;
 
-                // doi ten
+                
                 char tempTen[50];
                 strcpy(tempTen, hoten[i]);
                 strcpy(hoten[i], hoten[j]);
